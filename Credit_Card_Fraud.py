@@ -21,13 +21,13 @@ data.head()
 #Inflate the original dataset
 n_replicas = 10
 
-# inflate the original dataset
 big_raw_data = pd.DataFrame(np.repeat(data.values, n_replicas, axis=0), columns=data.columns)
 
 print("There are " + str(len(big_raw_data)) + " observations in the inflated credit card fraud dataset.")
 print("There are " + str(len(big_raw_data.columns)) + " variables in the dataset.")
 
 big_raw_data.head()
+
 #labels
 labels = big_raw_data.Class.unique()
 #sizes
