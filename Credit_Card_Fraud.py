@@ -7,8 +7,12 @@ from sklearn.utils.class_weight import compute_sample_weight
 from sklearn.metrics import roc_auc_score
 import time
 
+#Kaggle download
+import opendatasets as od
+od.download("https://www.kaggle.com/mlg-ulb/creditcardfraud")
+
 #Read and print DATA
-data = pd.read_csv('creditcard.csv')
+data = pd.read_csv('creditcardfraud/creditcard.csv')
 print("There are " + str(len(data)) + " observations in the credit card fraud dataset.")
 print("There are " + str(len(data.columns)) + " variables in the dataset.")
 
